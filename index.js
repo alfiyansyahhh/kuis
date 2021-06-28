@@ -1,17 +1,12 @@
-let produk = [
-    {nama : "mangga", harga : 20000},
-    {nama : "jeruk", harga : 20000},
-    {nama : "pisang", harga : 20000},
-]
-
 const discount = (total,harga) =>{
-    
-    if ((total*harga) > 60000) {
-        totalHarga ="total harga = " + total * harga 
-        potongan = "potongan = " + totalHarga * (35/100)
-        subtotal = "subtotal = " + totalHarga - potongan
-        result = totalHarga+potongan+subtotal
-        return result
+    const totalHarga = total * harga
+    if (totalHarga > 60000) {
+        potongan = totalHarga * (35/100)
+        subtotal = totalHarga - potongan
+        result = "total harga = " + totalHarga + "\n" + 
+                 "potongan = " + potongan + "\n" + 
+                 "subtotal = " + subtotal
+        return result 
     } else {
         totalHarga ="total harga = " + total * harga
         potongan = "potongan = 0"
