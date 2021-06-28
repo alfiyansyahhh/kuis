@@ -7,13 +7,13 @@ const discount = (total,harga) =>{
                  "potongan = " + potongan + "\n" + 
                  "subtotal = " + subtotal
         return result 
-    } else {
-        totalHarga ="total harga = " + total * harga
-        potongan = "potongan = 0"
-        subtotal = "subtotal = "+totalHarga - potongan
-        result = totalHarga+potongan+subtotal
-        return result
-    }
+    } else if (totalHarga < 60000){
+        subtotal = totalHarga
+        result = "total harga = " + totalHarga + "\n" + 
+                 "potongan = 0" + "\n" + 
+                 "subtotal = " + subtotal
+        return result 
+    } 
 }
 
-console.log(discount(10,10000))
+console.log(discount(1,10000))
